@@ -26,7 +26,7 @@
               <v-btn class="rounded success" style="width: 80%" @click="fill">Fill</v-btn>
             </v-col>
             <v-col class="text-center">
-              <v-btn class="rounded danger" style="width: 80%" @click="stop">Stop</v-btn>
+              <v-btn class="rounded" style="width: 80%; background-color: #34495e; color: white" @click="stop">Stop</v-btn>
             </v-col>
             <v-col class="text-center">
               <v-btn class="rounded info" style="width: 80%" @click="empty">Empty</v-btn>
@@ -43,12 +43,12 @@
             >
               <v-btn class="rounded error" style="width: 80%" @click="heatUp"><v-icon>mdi-plus</v-icon></v-btn>
             </v-col>
-            <v-col
+            <v-row
               align="center"
               justify="center"
             >
-              <strong style="text-size: 20px">{{ heat }}°C</strong>
-            </v-col>
+              <strong style="text-size: 20px">{{ desiredHeat }}°C</strong>
+            </v-row>
             <v-col
               align="center"
               justify="center"
@@ -66,7 +66,7 @@ export default {
   data: () => ({
     state: 'Emptying',
     progress: 0,
-    heat: 40
+    desiredHeat: 40
   }),
   computed: {
     displayStatus () {
@@ -116,10 +116,10 @@ export default {
       }, 1000)
     },
     heatUp () {
-      this.heat += 1
+      this.desiredHeat += 1
     },
     heatDown () {
-      this.heat -= 1
+      this.desiredHeat -= 1
     }
   }
 }

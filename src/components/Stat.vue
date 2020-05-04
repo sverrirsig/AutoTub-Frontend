@@ -1,20 +1,13 @@
 <template>
     <div>
-        <v-col :key="text">
-            <v-card
-            class="pa-2"
-            outlined
-            tile
-            >
-                <v-card-title>{{ text }}</v-card-title>
-                <v-card-text>{{ number }}</v-card-text>
-            </v-card>
-        </v-col>
-        <v-responsive
-            v-if="n === 2"
-            :key="`width-${n}`"
-            width="100%"
-        ></v-responsive>
+        <v-row align="center" justify="space-between">
+            <v-col align="align" justify="center">
+                <strong style="margin: 16px 0px 16px 20px">{{ this.text }}</strong>
+            </v-col>
+            <v-col align="right" justify="center" style="flex: justify-content">
+                <p style="margin: 16px 20px 16px 0px">{{ this.number }}</p>
+            </v-col>
+        </v-row>
     </div>
 </template>
 
