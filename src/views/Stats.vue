@@ -40,7 +40,7 @@ export default {
         },
         {
           text: 'Average empty time',
-          number: '13 minutes'
+          number: '10 minutes'
         }
       ]
     }
